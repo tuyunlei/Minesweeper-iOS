@@ -1,0 +1,42 @@
+{
+  "configurations" : [
+    {
+      "id" : "84552A56-16B7-448F-9659-891B4AFC27D5",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Minesweeper.xcodeproj",
+      "identifier" : "2B330C672BCEECF300A09EA8",
+      "name" : "Minesweeper"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Minesweeper.xcodeproj",
+        "identifier" : "2B330C772BCEECF500A09EA8",
+        "name" : "MinesweeperTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Minesweeper.xcodeproj",
+        "identifier" : "2B330C812BCEECF500A09EA8",
+        "name" : "MinesweeperUITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:Minesweeper.xcodeproj",
+        "identifier" : "2B2D7AB22BD1F168008F953D",
+        "name" : "MinesweeperSDKTests"
+      }
+    }
+  ],
+  "version" : 1
+}
