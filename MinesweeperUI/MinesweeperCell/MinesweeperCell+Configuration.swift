@@ -1,31 +1,24 @@
 import SwiftUI
 import MinesweeperSDK
 
-public extension MinesweeperCell {
-    struct Configuration: Codable {
-        let size: CGFloat
-        let content: Content
-        let fontSize: CGFloat
-        let background: Color
-
-        public init(size: CGFloat, content: Content, fontSize: CGFloat, background: Color) {
-            self.size = size
-            self.content = content
-            self.fontSize = fontSize
-            self.background = background
-        }
+extension MinesweeperCell {
+    public struct Configuration: Codable {
+        public var size: CGFloat
+        public var content: Content
+        public var fontSize: CGFloat
+        public var background: Color
     }
 }
 
-public extension MinesweeperCell.Configuration {
-    enum Content: Codable {
+extension MinesweeperCell.Configuration {
+    public enum Content: Codable {
         case empty
-        case number(value: MinesweeperNumber, Color: Color)
+        case number(value: MinesweeperNumber, color: Color)
         case image(name: String, color: Color)
     }
 }
 
-struct RGBA: Codable {
+private struct RGBA: Codable {
     let red: Double
     let green: Double
     let blue: Double
@@ -33,7 +26,7 @@ struct RGBA: Codable {
 }
 
 extension Color: Codable {
-    var rgba: RGBA {
+    private var rgba: RGBA {
         var red: CGFloat = 0
         var green: CGFloat = 0
         var blue: CGFloat = 0

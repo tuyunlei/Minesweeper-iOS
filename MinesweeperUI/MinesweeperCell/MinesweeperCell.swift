@@ -56,18 +56,18 @@ struct MinesweeperCell_Previews: PreviewProvider, View {
     static let configurationGrid: [[MinesweeperCell.Configuration]] = [
         [
             .init(size: size, content: .empty, fontSize: fontSize, background: exposedColor),
-            .init(size: size, content: .number(value: .one, Color: colorMap[.one]!), fontSize: fontSize, background: exposedColor),
-            .init(size: size, content: .number(value: .two, Color: colorMap[.two]!), fontSize: fontSize, background: exposedColor),
+            .init(size: size, content: .number(value: .one, color: colorMap[.one]!), fontSize: fontSize, background: exposedColor),
+            .init(size: size, content: .number(value: .two, color: colorMap[.two]!), fontSize: fontSize, background: exposedColor),
         ],
         [
-            .init(size: size, content: .number(value: .three, Color: colorMap[.three]!), fontSize: fontSize, background: exposedColor),
-            .init(size: size, content: .number(value: .four, Color: colorMap[.four]!), fontSize: fontSize, background: exposedColor),
-            .init(size: size, content: .number(value: .five, Color: colorMap[.five]!), fontSize: fontSize, background: exposedColor),
+            .init(size: size, content: .number(value: .three, color: colorMap[.three]!), fontSize: fontSize, background: exposedColor),
+            .init(size: size, content: .number(value: .four, color: colorMap[.four]!), fontSize: fontSize, background: exposedColor),
+            .init(size: size, content: .number(value: .five, color: colorMap[.five]!), fontSize: fontSize, background: exposedColor),
         ],
         [
-            .init(size: size, content: .number(value: .six, Color: colorMap[.six]!), fontSize: fontSize, background: exposedColor),
-            .init(size: size, content: .number(value: .seven, Color: colorMap[.seven]!), fontSize: fontSize, background: exposedColor),
-            .init(size: size, content: .number(value: .eight, Color: colorMap[.eight]!), fontSize: fontSize, background: exposedColor),
+            .init(size: size, content: .number(value: .six, color: colorMap[.six]!), fontSize: fontSize, background: exposedColor),
+            .init(size: size, content: .number(value: .seven, color: colorMap[.seven]!), fontSize: fontSize, background: exposedColor),
+            .init(size: size, content: .number(value: .eight, color: colorMap[.eight]!), fontSize: fontSize, background: exposedColor),
         ],
         [
             .init(size: size, content: .image(name: "bolt.circle.fill", color: .black), fontSize: fontSize, background: exposedColor),
