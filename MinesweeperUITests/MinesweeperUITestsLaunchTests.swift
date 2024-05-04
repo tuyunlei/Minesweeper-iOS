@@ -1,10 +1,3 @@
-//
-//  MinesweeperUITestsLaunchTests.swift
-//  MinesweeperUITests
-//
-//  Created by X_Tu on 2024/4/17.
-//
-
 import XCTest
 
 final class MinesweeperUITestsLaunchTests: XCTestCase {

@@ -1,10 +1,3 @@
-//
-//  MinesweeperSDKTests.swift
-//  MinesweeperSDKTests
-//
-//  Created by X_Tu on 2024/4/19.
-//
-
 import XCTest
 @testable import MinesweeperSDK
 

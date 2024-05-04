@@ -1,10 +1,3 @@
-//
-//  MinesweeperNumber.swift
-//  Minesweeper
-//
-//  Created by X_Tu on 2024/4/18.
-//
-
 public enum MinesweeperNumber: Int, Codable {
     case unknown = -1
     case zero = 0
