@@ -37,6 +37,7 @@
 		2B330C892BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B330C882BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift */; };
 		2B5878F12BE64DB5003EDDA8 /* MinesweeperBoard+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5878F02BE64DB5003EDDA8 /* MinesweeperBoard+Collection.swift */; };
 		2BD020912BD0E7BD00EE4305 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD020902BD0E7BD00EE4305 /* SwifterSwift */; };
+		2BE6D3802BE65F440026B874 /* MinesweeperBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6D37F2BE65F440026B874 /* MinesweeperBoardTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		2B5878F02BE64DB5003EDDA8 /* MinesweeperBoard+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperBoard+Collection.swift"; sourceTree = "<group>"; };
 		2BBF3E842BD09B8100D8B9B2 /* Minesweeper.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Minesweeper.xctestplan; sourceTree = "<group>"; };
 		2BD020932BD0EB2400EE4305 /* MinesweeperNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperNumber.swift; sourceTree = "<group>"; };
+		2BE6D37F2BE65F440026B874 /* MinesweeperBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperBoardTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 				2B330C862BCEECF500A09EA8 /* MinesweeperUITests.swift */,
 				2B330C882BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift */,
 				2B235B122BD73C7D00182342 /* MinesweeperCellTests.swift */,
+				2BE6D37F2BE65F440026B874 /* MinesweeperBoardTests.swift */,
 			);
 			path = MinesweeperUITests;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B235B132BD73C7D00182342 /* MinesweeperCellTests.swift in Sources */,
+				2BE6D3802BE65F440026B874 /* MinesweeperBoardTests.swift in Sources */,
 				2B330C872BCEECF500A09EA8 /* MinesweeperUITests.swift in Sources */,
 				2B330C892BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift in Sources */,
 			);

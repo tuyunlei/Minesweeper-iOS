@@ -3,7 +3,7 @@ import SwifterSwift
 import MinesweeperSDK
 
 public struct MinesweeperCell: View {
-    let configuration: Configuration
+    public var configuration: Configuration
 
     public init(configuration: Configuration) {
         self.configuration = configuration

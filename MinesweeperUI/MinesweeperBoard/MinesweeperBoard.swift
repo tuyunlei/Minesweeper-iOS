@@ -2,6 +2,10 @@ import SwiftUI
 
 public struct MinesweeperBoard: View {
     public let configuration: Configuration
+    
+    public init(configuration: Configuration) {
+        self.configuration = configuration
+    }
 
     public var body: some View {
         VStack(spacing: 1) {

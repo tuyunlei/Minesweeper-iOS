@@ -5,6 +5,11 @@ extension MinesweeperBoard {
     public struct Cell: Codable {
         public var content: Content
         public var cover: Cover
+
+        public init(content: Content, cover: Cover) {
+            self.content = content
+            self.cover = cover
+        }
     }
 
     public struct Configuration: Codable {
@@ -33,6 +38,11 @@ extension MinesweeperBoard {
     public struct ImageSet: Codable {
         public var mine: String
         public var flag: String
+
+        public init(mine: String, flag: String) {
+            self.mine = mine
+            self.flag = flag
+        }
     }
 
     public struct ColorSet: Codable {
@@ -53,6 +63,23 @@ extension MinesweeperBoard {
 
         public var realFlag: Color
         public var hintFlag: Color
+        
+        public init(exposedBackground: Color, unexposedBackground: Color, selectedBackground: Color, numberOne: Color, numberTwo: Color, numberThree: Color, numberFour: Color, numberFive: Color, numberSix: Color, numberSeven: Color, numberEight: Color, mine: Color, realFlag: Color, hintFlag: Color) {
+            self.exposedBackground = exposedBackground
+            self.unexposedBackground = unexposedBackground
+            self.selectedBackground = selectedBackground
+            self.numberOne = numberOne
+            self.numberTwo = numberTwo
+            self.numberThree = numberThree
+            self.numberFour = numberFour
+            self.numberFive = numberFive
+            self.numberSix = numberSix
+            self.numberSeven = numberSeven
+            self.numberEight = numberEight
+            self.mine = mine
+            self.realFlag = realFlag
+            self.hintFlag = hintFlag
+        }
     }
 }
 

@@ -7,6 +7,13 @@ extension MinesweeperCell {
         public var content: Content
         public var fontSize: CGFloat
         public var background: Color
+
+        public init(size: CGFloat, content: Content, fontSize: CGFloat, background: Color) {
+            self.size = size
+            self.content = content
+            self.fontSize = fontSize
+            self.background = background
+        }
     }
 }
 
