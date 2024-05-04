@@ -1,10 +1,3 @@
-//
-//  MinesweeperCell.swift
-//  Minesweeper
-//
-//  Created by X_Tu on 2024/4/17.
-//
-
 import SwiftUI
 import SwifterSwift
 import MinesweeperSDK

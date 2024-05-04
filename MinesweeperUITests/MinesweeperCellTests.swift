@@ -1,10 +1,3 @@
-//
-//  MinesweeperCellTests.swift
-//  MinesweeperUITests
-//
-//  Created by X_Tu on 2024/4/23.
-//
-
 import XCTest
 import SwiftUI
 import PreviewSnapshots
