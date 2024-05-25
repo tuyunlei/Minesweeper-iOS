@@ -90,19 +90,20 @@ struct MinesweeperBoard_Previews: PreviewProvider, View {
                 flag: "flag.fill"
             ),
             colorSet: .init(
+                boardBackground: Color(white: 1),
                 exposedBackground: Color(white: 0.85),
                 unexposedBackground: Color(white: 0.94),
-                selectedBackground: .red,
+                selectedBackground: Color(red: 1, green: 0, blue: 0),
                 numberOne: Color(red: 0, green: 0, blue: 1),
                 numberTwo: Color(red: 0, green: 0.5, blue: 0),
-                numberThree: .red,
+                numberThree: Color(red: 1, green: 0, blue: 0),
                 numberFour: Color(red: 0, green: 0, blue: 0.5),
                 numberFive: Color(red: 0.5, green: 0, blue: 0),
                 numberSix: Color(red: 0, green: 0.5, blue: 0.5),
-                numberSeven: .black,
+                numberSeven: Color(white: 0),
                 numberEight: Color(white: 0.5),
-                mine: .black,
-                realFlag: .red,
+                mine: Color(white: 0),
+                realFlag: Color(red: 1, green: 0, blue: 0),
                 hintFlag: Color(white: 0.85)
             )
         )

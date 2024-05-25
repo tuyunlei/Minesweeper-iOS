@@ -46,6 +46,7 @@ extension MinesweeperBoard {
     }
 
     public struct ColorSet: Codable {
+        public var boardBackground: Color
         public var exposedBackground: Color
         public var unexposedBackground: Color
         public var selectedBackground: Color
@@ -64,7 +65,8 @@ extension MinesweeperBoard {
         public var realFlag: Color
         public var hintFlag: Color
         
-        public init(exposedBackground: Color, unexposedBackground: Color, selectedBackground: Color, numberOne: Color, numberTwo: Color, numberThree: Color, numberFour: Color, numberFive: Color, numberSix: Color, numberSeven: Color, numberEight: Color, mine: Color, realFlag: Color, hintFlag: Color) {
+        public init(boardBackground: Color, exposedBackground: Color, unexposedBackground: Color, selectedBackground: Color, numberOne: Color, numberTwo: Color, numberThree: Color, numberFour: Color, numberFive: Color, numberSix: Color, numberSeven: Color, numberEight: Color, mine: Color, realFlag: Color, hintFlag: Color) {
+            self.boardBackground = boardBackground
             self.exposedBackground = exposedBackground
             self.unexposedBackground = unexposedBackground
             self.selectedBackground = selectedBackground
