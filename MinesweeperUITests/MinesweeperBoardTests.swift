@@ -60,7 +60,7 @@ final class MinesweeperBoardTests: XCTestCase {
                 .init(name: "board", state: configuration)
             ],
             configure: {
-                MinesweeperBoard(configuration: $0)
+                MinesweeperBoard(configuration: $0) { _, _ in }
             }
         )
 

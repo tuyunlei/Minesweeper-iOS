@@ -1,10 +1,14 @@
 import SwiftUI
 
 public struct MinesweeperBoard: View {
+    public typealias CellTapHandler = (_ row: Int, _ col: Int) -> Void
+
     public let configuration: Configuration
-    
-    public init(configuration: Configuration) {
+    private let onCellTap: CellTapHandler
+
+    public init(configuration: Configuration, onTapCell: @escaping CellTapHandler) {
         self.configuration = configuration
+        self.onCellTap = onTapCell
     }
 
     public var body: some View {
@@ -12,9 +16,12 @@ public struct MinesweeperBoard: View {
             ForEach(0..<configuration.height, id: \.self) { row in
                 HStack(spacing: 1) {
                     ForEach(0..<configuration.width, id: \.self) { col in
-                        let configuration = makeCellConfiguration(row: row, col: col)
+                        let cellConfiguration = makeCellConfiguration(row: row, col: col)
 
-                        MinesweeperCell(configuration: configuration)
+                        MinesweeperCell(configuration: cellConfiguration)
+                            .onTapGesture {
+                                onCellTap(row, col)
+                            }
                     }
                 }
             }
@@ -44,16 +51,16 @@ public struct MinesweeperBoard: View {
             }
 
         let background: Color =
-        switch cell.cover {
-        case .none:
-            switch cell.content {
-            case .number, .mine(isSelected: false): configuration.colorSet.exposedBackground
-            case .mine(isSelected: true):
-                configuration.colorSet.selectedBackground
+            switch cell.cover {
+            case .none:
+                switch cell.content {
+                case .number, .mine(isSelected: false): configuration.colorSet.exposedBackground
+                case .mine(isSelected: true):
+                    configuration.colorSet.selectedBackground
+                }
+            case .block, .realFlag, .hintFlag:
+                configuration.colorSet.unexposedBackground
             }
-
-        case .block, .realFlag, .hintFlag: configuration.colorSet.unexposedBackground
-        }
 
         return .init(
             size: configuration.cellSize,
@@ -125,7 +132,11 @@ struct MinesweeperBoard_Previews: PreviewProvider, View {
     @State var configuration = makeConfiguration()
 
     var body: some View {
-        MinesweeperBoard(configuration: configuration)
+        ScrollView([.vertical, .horizontal]) {
+            MinesweeperBoard(configuration: configuration) { (row, col) in
+                configuration[row, col].cover = .none
+            }
+        }
     }
 }
 #endif
