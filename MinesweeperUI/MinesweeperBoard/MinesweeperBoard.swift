@@ -26,6 +26,7 @@ public struct MinesweeperBoard: View {
                 }
             }
         }
+        .background(configuration.colorSet.boardBackground)
     }
 
     private func makeCellConfiguration(row: Int, col: Int) -> MinesweeperCell.Configuration {

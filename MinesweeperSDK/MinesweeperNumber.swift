@@ -1,4 +1,4 @@
-public enum MinesweeperNumber: Int, Codable {
+public enum MinesweeperNumber: Int, Codable, CaseIterable {
     case unknown = -1
     case zero = 0
     case one = 1
