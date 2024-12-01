@@ -1,4 +1,4 @@
-extension MinesweeperBoard.Configuration: Collection {
+extension MinesweeperBoard.ViewModel: Collection {
     public struct Index: Comparable {
         public let row: Int
         public let col: Int
@@ -6,7 +6,7 @@ extension MinesweeperBoard.Configuration: Collection {
 
         public var index: Int { row * width + col }
 
-        public static func < (lhs: MinesweeperBoard.Configuration.Index, rhs: MinesweeperBoard.Configuration.Index) -> Bool {
+        public static func < (lhs: Self, rhs: Self) -> Bool {
             lhs.index < rhs.index
         }
     }
@@ -16,21 +16,21 @@ extension MinesweeperBoard.Configuration: Collection {
     }
 
     public var endIndex: Index {
-        makeIndex(height, 0)
+        makeIndex(configuration.height, 0)
     }
 
-    public subscript(position: Index) -> MinesweeperBoard.Cell {
-        get { cells[position.index] }
-        set { cells[position.index] = newValue }
+    public subscript(position: Index) -> MinesweeperBoard.CellState {
+        get { cellStates[position.index] }
+        set { cellStates[position.index] = newValue }
     }
-    
-    public subscript(row: Int, col: Int) -> MinesweeperBoard.Cell {
+
+    public subscript(row: Int, col: Int) -> MinesweeperBoard.CellState {
         get { self[makeIndex(row, col)] }
         set { self[makeIndex(row, col)] = newValue }
     }
 
     public func index(after i: Index) -> Index {
-        if i.col == width - 1 {
+        if i.col == configuration.width - 1 {
             makeIndex(i.row + 1, 0)
         } else {
             makeIndex(i.row, i.col + 1)
@@ -38,6 +38,6 @@ extension MinesweeperBoard.Configuration: Collection {
     }
 
     private func makeIndex(_ row: Int, _ col: Int) -> Index {
-        .init(row: row, col: col, width: width)
+        .init(row: row, col: col, width: configuration.width)
     }
 }

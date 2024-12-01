@@ -1,16 +1,47 @@
-import XCTest
 import SwiftUI
-import PreviewSnapshots
-import PreviewSnapshotsTesting
 
-import MinesweeperUI
-import MinesweeperSDK
+extension MinesweeperBoard {
+    public struct View: SwiftUI.View {
+        public typealias CellTapHandler = (_ row: Int, _ col: Int) -> Void
 
-final class MinesweeperBoardTests: XCTestCase {
+        private let viewModel: ViewModel
 
-    func testAppearance() throws {
+        private let onTapCell: CellTapHandler
+
+        public init(viewModel: ViewModel, onTapCell: @escaping CellTapHandler) {
+            self.viewModel = viewModel
+            self.onTapCell = onTapCell
+        }
+
+        public var body: some SwiftUI.View {
+            VStack(spacing: 1) {
+                ForEach(0..<viewModel.configuration.height, id: \.self) { row in
+                    HStack(spacing: 1) {
+                        ForEach(0..<viewModel.configuration.width, id: \.self) { col in
+                            let cellState = viewModel[row, col]
+                            let cellViewModel = MinesweeperCell.ViewModel(
+                                configuration: viewModel.cellConfiguration,
+                                state: CellStateAdapter(inner: cellState, configuration: viewModel.configuration)
+                            )
+
+                            MinesweeperCell.View<CellStateAdapter>(viewModel: cellViewModel)
+                                .onTapGesture {
+                                    onTapCell(row, col)
+                                }
+                        }
+                    }
+                }
+            }
+            .background(viewModel.configuration.colorSet.boardBackground)
+        }
+    }
+}
+
+#if DEBUG || TEST
+private enum PreviewConstants {
+    static func makeViewModel() -> MinesweeperBoard.ViewModel {
         let configuration = MinesweeperBoard.Configuration(
-            width: 3,
+            width: 5,
             height: 5,
             cellSize: 32.0,
             fontSize: 18.0,
@@ -38,7 +69,7 @@ final class MinesweeperBoardTests: XCTestCase {
         )
         var viewModel = MinesweeperBoard.ViewModel(configuration: configuration)
 
-        viewModel[0, 0] = .init(content: .number(value: .zero), cover: .none)
+        viewModel[0, 0] = MinesweeperBoard.CellState(content: .number(value: .zero), cover: .none)
         viewModel[0, 1] = .init(content: .number(value: .one), cover: .none)
         viewModel[0, 2] = .init(content: .number(value: .two), cover: .none)
 
@@ -57,16 +88,17 @@ final class MinesweeperBoardTests: XCTestCase {
         viewModel[4, 0] = .init(content: .number(value: .zero), cover: .hintFlag)
         viewModel[4, 1] = .init(content: .number(value: .zero), cover: .realFlag)
 
-        let snapshots = PreviewSnapshots<MinesweeperBoard.ViewModel>(
-            configurations: [
-                .init(name: "board", state: viewModel)
-            ],
-            configure: {
-                MinesweeperBoard.View(viewModel: $0) { _, _ in }
-            }
-        )
-
-        snapshots.assertSnapshots(as: .image(precision: 0.97))
+        return viewModel
     }
-
 }
+
+#Preview {
+    let viewModel = PreviewConstants.makeViewModel()
+
+    ScrollView([.vertical, .horizontal]) {
+        MinesweeperBoard.View(viewModel: viewModel) { (row, col) in
+            viewModel[row, col].cover = .none
+        }
+    }
+}
+#endif

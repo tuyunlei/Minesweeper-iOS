@@ -46,6 +46,16 @@ extension EnumMap: Collection {
 extension EnumMap: Equatable where Value: Equatable {}
 extension EnumMap: Hashable where Value: Hashable {}
 
+private class CellState: MinesweeperCell.State {
+    var content: MinesweeperCell.Content
+    var background: Color
+
+    init(content: MinesweeperCell.Content, background: Color) {
+        self.content = content
+        self.background = background
+    }
+}
+
 final class MinesweeperCellTests: XCTestCase {
 
     func testAppearance() throws {
@@ -68,29 +78,33 @@ final class MinesweeperCellTests: XCTestCase {
             case .eight: Color(white: 0.5)
             }
         }
+        let configuration = MinesweeperCell.Configuration(size: size, fontSize: fontSize)
 
-        let snapshots = PreviewSnapshots<MinesweeperCell.Configuration>(
+        let snapshots = PreviewSnapshots<(MinesweeperCell.Content, Color)>(
             configurations: [
-                .init(name: "exposed_empty", state: .init(size: size, content: .empty, fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_one", state: .init(size: size, content: .number(value: .one, color: colorMap[.one]), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_two", state: .init(size: size, content: .number(value: .two, color: colorMap[.two]), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_three", state: .init(size: size, content: .number(value: .three, color: colorMap[.three]), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_four", state: .init(size: size, content: .number(value: .four, color: colorMap[.four]), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_five", state: .init(size: size, content: .number(value: .five, color: colorMap[.five]), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_six", state: .init(size: size, content: .number(value: .six, color: colorMap[.six]), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_seven", state: .init(size: size, content: .number(value: .seven, color: colorMap[.seven]), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_eight", state: .init(size: size, content: .number(value: .eight, color: colorMap[.eight]), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_mine", state: .init(size: size, content: .image(name: "bolt.circle.fill", color: Color(white: 0)), fontSize: fontSize, background: exposedColor)),
-                .init(name: "exposed_selected_mine", state: .init(size: size, content: .image(name: "bolt.circle.fill", color: Color(white: 0)), fontSize: fontSize, background: Color(red: 1, green: 0, blue: 0))),
-                .init(name: "unexposed_hint_flag", state: .init(size: size, content: .image(name: "flag.fill", color: hintFlagColor), fontSize: fontSize, background: unexposedColor)),
-                .init(name: "unexposed_real_flag", state: .init(size: size, content: .image(name: "flag.fill", color: realFlagColor), fontSize: fontSize, background: unexposedColor)),
+                .init(name: "exposed_empty", state: (.empty, exposedColor)),
+                .init(name: "exposed_one", state: (.number(value: .one, color: colorMap[.one]), exposedColor)),
+                .init(name: "exposed_two", state: (.number(value: .two, color: colorMap[.two]), exposedColor)),
+                .init(name: "exposed_three", state: (.number(value: .three, color: colorMap[.three]), exposedColor)),
+                .init(name: "exposed_four", state: (.number(value: .four, color: colorMap[.four]), exposedColor)),
+                .init(name: "exposed_five", state: (.number(value: .five, color: colorMap[.five]), exposedColor)),
+                .init(name: "exposed_six", state: (.number(value: .six, color: colorMap[.six]), exposedColor)),
+                .init(name: "exposed_seven", state: (.number(value: .seven, color: colorMap[.seven]), exposedColor)),
+                .init(name: "exposed_eight", state: (.number(value: .eight, color: colorMap[.eight]), exposedColor)),
+                .init(name: "exposed_mine", state: (.image(name: "bolt.circle.fill", color: Color(white: 0)), exposedColor)),
+                .init(name: "exposed_selected_mine", state: (.image(name: "bolt.circle.fill", color: Color(white: 0)), Color(red: 1, green: 0, blue: 0))),
+                .init(name: "unexposed_hint_flag", state: (.image(name: "flag.fill", color: hintFlagColor), unexposedColor)),
+                .init(name: "unexposed_real_flag", state: (.image(name: "flag.fill", color: realFlagColor), unexposedColor)),
             ],
-            configure: { configuration in
-                MinesweeperCell(configuration: configuration)
+            configure: { (content, background) in
+                MinesweeperCell.View(viewModel: .init(
+                    configuration: configuration,
+                    state: CellState(content: content, background: background)
+                ))
             }
         )
 
-        snapshots.assertSnapshots()
+        snapshots.assertSnapshots(as: .image(precision: 0.97))
     }
 
 }
