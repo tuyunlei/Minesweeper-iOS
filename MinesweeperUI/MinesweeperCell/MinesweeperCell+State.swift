@@ -62,7 +62,11 @@ extension Color: Codable {
         var blue: CGFloat = 0
         var alpha: CGFloat = 0
 
+#if os(iOS)
         UIColor(self).getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+#elseif os(macOS)
+        NSColor(self).getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+#endif
 
         return RGBA(red: Double(red), green: Double(green), blue: Double(blue), alpha: Double(alpha))
     }

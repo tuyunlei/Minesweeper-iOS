@@ -2,6 +2,9 @@ import SwiftUI
 
 extension MinesweeperBoard {
     public struct View: SwiftUI.View {
+        public typealias ViewModel = MinesweeperBoard.ViewModel
+        typealias CellStateAdapter = MinesweeperBoard.CellStateAdapter
+
         public typealias CellTapHandler = (_ row: Int, _ col: Int) -> Void
 
         private let viewModel: ViewModel
@@ -93,11 +96,13 @@ private enum PreviewConstants {
 }
 
 #Preview {
-    let viewModel = PreviewConstants.makeViewModel()
+    Group {
+        let viewModel = PreviewConstants.makeViewModel()
 
-    ScrollView([.vertical, .horizontal]) {
-        MinesweeperBoard.View(viewModel: viewModel) { (row, col) in
-            viewModel[row, col].cover = .none
+        ScrollView([.vertical, .horizontal]) {
+            MinesweeperBoard.View(viewModel: viewModel) { (row, col) in
+                viewModel[row, col].cover = .none
+            }
         }
     }
 }

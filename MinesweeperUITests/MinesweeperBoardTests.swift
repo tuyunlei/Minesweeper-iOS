@@ -8,6 +8,7 @@ import MinesweeperSDK
 
 final class MinesweeperBoardTests: XCTestCase {
 
+#if os(iOS)
     func testAppearance() throws {
         let configuration = MinesweeperBoard.Configuration(
             width: 3,
@@ -68,5 +69,6 @@ final class MinesweeperBoardTests: XCTestCase {
 
         snapshots.assertSnapshots(as: .image(precision: 0.97))
     }
+#endif
 
 }

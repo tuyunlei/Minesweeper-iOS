@@ -58,6 +58,7 @@ private class CellState: MinesweeperCell.State {
 
 final class MinesweeperCellTests: XCTestCase {
 
+#if os(iOS)
     func testAppearance() throws {
         let size = 32.0
         let fontSize = 18.0
@@ -106,5 +107,6 @@ final class MinesweeperCellTests: XCTestCase {
 
         snapshots.assertSnapshots(as: .image(precision: 0.97))
     }
+#endif
 
 }

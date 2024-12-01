@@ -2,6 +2,9 @@ import SwiftUI
 
 extension MinesweeperCell {
     public struct View<State: MinesweeperCell.State>: SwiftUI.View {
+        public typealias ViewModel = MinesweeperCell.ViewModel
+        typealias Configuration = MinesweeperCell.Configuration
+
         private let viewModel: ViewModel<State>
 
         private var configuration: Configuration {
@@ -95,24 +98,26 @@ private enum PreviewConstants {
 }
 
 #Preview {
-    var stateGrid: [[PreviewCellState]] = PreviewConstants.stateGrid
+    Group {
+        let stateGrid: [[PreviewCellState]] = PreviewConstants.stateGrid
 
-    VStack(spacing: 1) {
-        ForEach(stateGrid.indices, id: \.self) { row in
-            let stateRow = stateGrid[row]
+        VStack(spacing: 1) {
+            ForEach(stateGrid.indices, id: \.self) { row in
+                let stateRow = stateGrid[row]
 
-            HStack(spacing: 1) {
-                ForEach(stateRow.indices, id: \.self) { col in
-                    let state = stateRow[col]
-                    let viewModel = MinesweeperCell.ViewModel(
-                        configuration: PreviewConstants.configuration,
-                        state: state
-                    )
+                HStack(spacing: 1) {
+                    ForEach(stateRow.indices, id: \.self) { col in
+                        let state = stateRow[col]
+                        let viewModel = MinesweeperCell.ViewModel(
+                            configuration: PreviewConstants.configuration,
+                            state: state
+                        )
 
-                    MinesweeperCell.View(viewModel: viewModel)
-                        .onTapGesture {
-                            state.content = .empty
-                        }
+                        MinesweeperCell.View(viewModel: viewModel)
+                            .onTapGesture {
+                                state.content = .empty
+                            }
+                    }
                 }
             }
         }
