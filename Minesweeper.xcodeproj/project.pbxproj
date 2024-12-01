@@ -12,14 +12,12 @@
 		2B235B022BD5F72600182342 /* MinesweeperUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2B235AF92BD5F72600182342 /* MinesweeperUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2B235B072BD5F73D00182342 /* MinesweeperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D7A9B2BD13733008F953D /* MinesweeperCell.swift */; };
 		2B235B082BD5F74200182342 /* MinesweeperCell+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D7A9E2BD177EE008F953D /* MinesweeperCell+Configuration.swift */; };
-		2B235B092BD5F74600182342 /* MinesweeperCell+Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D7AA02BD17808008F953D /* MinesweeperCell+Square.swift */; };
-		2B235B0A2BD5F74A00182342 /* MinesweeperCell+Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D7ACA2BD1F45E008F953D /* MinesweeperCell+Number.swift */; };
 		2B235B0C2BD5F76A00182342 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2B235B0B2BD5F76A00182342 /* SwifterSwift */; };
-		2B235B0F2BD5FF5B00182342 /* LookinServer in Frameworks */ = {isa = PBXBuildFile; productRef = 2B235B0E2BD5FF5B00182342 /* LookinServer */; };
 		2B235B132BD73C7D00182342 /* MinesweeperCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B235B122BD73C7D00182342 /* MinesweeperCellTests.swift */; };
 		2B235B162BD7402200182342 /* PreviewSnapshots in Frameworks */ = {isa = PBXBuildFile; productRef = 2B235B152BD7402200182342 /* PreviewSnapshots */; };
 		2B235B182BD7402200182342 /* PreviewSnapshotsTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 2B235B172BD7402200182342 /* PreviewSnapshotsTesting */; };
-		2B25BE3D2BE5E37C00055C5B /* MinesweeperBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25BE3C2BE5E37C00055C5B /* MinesweeperBoard.swift */; };
+		2B25BE3D2BE5E37C00055C5B /* MinesweeperBoard+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25BE3C2BE5E37C00055C5B /* MinesweeperBoard+View.swift */; };
+		2B25BE3F2BE5F13400055C5B /* MinesweeperBoard+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B25BE3E2BE5F13400055C5B /* MinesweeperBoard+Configuration.swift */; };
 		2B2D7AAE2BD1F168008F953D /* MinesweeperSDK.docc in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D7AAD2BD1F168008F953D /* MinesweeperSDK.docc */; };
 		2B2D7AB42BD1F168008F953D /* MinesweeperSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B2D7AAA2BD1F168008F953D /* MinesweeperSDK.framework */; };
 		2B2D7ABB2BD1F168008F953D /* MinesweeperSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B2D7ABA2BD1F168008F953D /* MinesweeperSDKTests.swift */; };
@@ -34,7 +32,15 @@
 		2B330C7D2BCEECF500A09EA8 /* MinesweeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B330C7C2BCEECF500A09EA8 /* MinesweeperTests.swift */; };
 		2B330C872BCEECF500A09EA8 /* MinesweeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B330C862BCEECF500A09EA8 /* MinesweeperUITests.swift */; };
 		2B330C892BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B330C882BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift */; };
+		2B5878F12BE64DB5003EDDA8 /* MinesweeperBoard+Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5878F02BE64DB5003EDDA8 /* MinesweeperBoard+Collection.swift */; };
+		2BA1AA1A2CFBA45D0016DAF3 /* MinesweeperBoard+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1AA192CFBA4580016DAF3 /* MinesweeperBoard+ViewModel.swift */; };
+		2BA1AA1C2CFC02880016DAF3 /* MinesweeperCell+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA1AA1B2CFC027F0016DAF3 /* MinesweeperCell+ViewModel.swift */; };
 		2BD020912BD0E7BD00EE4305 /* SwifterSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2BD020902BD0E7BD00EE4305 /* SwifterSwift */; };
+		2BE6D3802BE65F440026B874 /* MinesweeperBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE6D37F2BE65F440026B874 /* MinesweeperBoardTests.swift */; };
+		2BEABEDA2CFB63AA00749B23 /* MinesweeperCell+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEABED92CFB63AA00749B23 /* MinesweeperCell+State.swift */; };
+		2BEABEDC2CFB66F000749B23 /* MinesweeperCell+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEABEDB2CFB66F000749B23 /* MinesweeperCell+View.swift */; };
+		2BEABEDE2CFB689200749B23 /* MinesweeperBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEABEDD2CFB689200749B23 /* MinesweeperBoard.swift */; };
+		2BEABEE02CFB691600749B23 /* MinesweeperBoard+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BEABEDF2CFB691600749B23 /* MinesweeperBoard+State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,16 +108,15 @@
 		2B235AF92BD5F72600182342 /* MinesweeperUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MinesweeperUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B235AFC2BD5F72600182342 /* MinesweeperUI.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MinesweeperUI.docc; sourceTree = "<group>"; };
 		2B235B122BD73C7D00182342 /* MinesweeperCellTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperCellTests.swift; sourceTree = "<group>"; };
-		2B25BE3C2BE5E37C00055C5B /* MinesweeperBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperBoard.swift; sourceTree = "<group>"; };
+		2B25BE3C2BE5E37C00055C5B /* MinesweeperBoard+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperBoard+View.swift"; sourceTree = "<group>"; };
+		2B25BE3E2BE5F13400055C5B /* MinesweeperBoard+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperBoard+Configuration.swift"; sourceTree = "<group>"; };
 		2B2D7A9B2BD13733008F953D /* MinesweeperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperCell.swift; sourceTree = "<group>"; };
 		2B2D7A9E2BD177EE008F953D /* MinesweeperCell+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperCell+Configuration.swift"; sourceTree = "<group>"; };
-		2B2D7AA02BD17808008F953D /* MinesweeperCell+Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperCell+Square.swift"; sourceTree = "<group>"; };
 		2B2D7AA32BD1F097008F953D /* MinesweeperNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperNumberTests.swift; sourceTree = "<group>"; };
 		2B2D7AAA2BD1F168008F953D /* MinesweeperSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MinesweeperSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2D7AAD2BD1F168008F953D /* MinesweeperSDK.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = MinesweeperSDK.docc; sourceTree = "<group>"; };
 		2B2D7AB32BD1F168008F953D /* MinesweeperSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinesweeperSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B2D7ABA2BD1F168008F953D /* MinesweeperSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperSDKTests.swift; sourceTree = "<group>"; };
-		2B2D7ACA2BD1F45E008F953D /* MinesweeperCell+Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperCell+Number.swift"; sourceTree = "<group>"; };
 		2B330C682BCEECF300A09EA8 /* Minesweeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Minesweeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B330C6B2BCEECF300A09EA8 /* MinesweeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperApp.swift; sourceTree = "<group>"; };
 		2B330C6D2BCEECF300A09EA8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -122,8 +127,16 @@
 		2B330C822BCEECF500A09EA8 /* MinesweeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MinesweeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B330C862BCEECF500A09EA8 /* MinesweeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperUITests.swift; sourceTree = "<group>"; };
 		2B330C882BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2B5878F02BE64DB5003EDDA8 /* MinesweeperBoard+Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperBoard+Collection.swift"; sourceTree = "<group>"; };
+		2BA1AA192CFBA4580016DAF3 /* MinesweeperBoard+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperBoard+ViewModel.swift"; sourceTree = "<group>"; };
+		2BA1AA1B2CFC027F0016DAF3 /* MinesweeperCell+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperCell+ViewModel.swift"; sourceTree = "<group>"; };
 		2BBF3E842BD09B8100D8B9B2 /* Minesweeper.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Minesweeper.xctestplan; sourceTree = "<group>"; };
 		2BD020932BD0EB2400EE4305 /* MinesweeperNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperNumber.swift; sourceTree = "<group>"; };
+		2BE6D37F2BE65F440026B874 /* MinesweeperBoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperBoardTests.swift; sourceTree = "<group>"; };
+		2BEABED92CFB63AA00749B23 /* MinesweeperCell+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperCell+State.swift"; sourceTree = "<group>"; };
+		2BEABEDB2CFB66F000749B23 /* MinesweeperCell+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperCell+View.swift"; sourceTree = "<group>"; };
+		2BEABEDD2CFB689200749B23 /* MinesweeperBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinesweeperBoard.swift; sourceTree = "<group>"; };
+		2BEABEDF2CFB691600749B23 /* MinesweeperBoard+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MinesweeperBoard+State.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +171,6 @@
 				2BD020912BD0E7BD00EE4305 /* SwifterSwift in Frameworks */,
 				2B2D7ABF2BD1F168008F953D /* MinesweeperSDK.framework in Frameworks */,
 				2B235B012BD5F72600182342 /* MinesweeperUI.framework in Frameworks */,
-				2B235B0F2BD5FF5B00182342 /* LookinServer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,7 +212,12 @@
 		2B25BE3B2BE5E36000055C5B /* MinesweeperBoard */ = {
 			isa = PBXGroup;
 			children = (
-				2B25BE3C2BE5E37C00055C5B /* MinesweeperBoard.swift */,
+				2BA1AA192CFBA4580016DAF3 /* MinesweeperBoard+ViewModel.swift */,
+				2B25BE3C2BE5E37C00055C5B /* MinesweeperBoard+View.swift */,
+				2B25BE3E2BE5F13400055C5B /* MinesweeperBoard+Configuration.swift */,
+				2B5878F02BE64DB5003EDDA8 /* MinesweeperBoard+Collection.swift */,
+				2BEABEDD2CFB689200749B23 /* MinesweeperBoard.swift */,
+				2BEABEDF2CFB691600749B23 /* MinesweeperBoard+State.swift */,
 			);
 			path = MinesweeperBoard;
 			sourceTree = "<group>";
@@ -208,10 +225,11 @@
 		2B2D7A9D2BD177DA008F953D /* MinesweeperCell */ = {
 			isa = PBXGroup;
 			children = (
+				2BA1AA1B2CFC027F0016DAF3 /* MinesweeperCell+ViewModel.swift */,
 				2B2D7A9B2BD13733008F953D /* MinesweeperCell.swift */,
 				2B2D7A9E2BD177EE008F953D /* MinesweeperCell+Configuration.swift */,
-				2B2D7AA02BD17808008F953D /* MinesweeperCell+Square.swift */,
-				2B2D7ACA2BD1F45E008F953D /* MinesweeperCell+Number.swift */,
+				2BEABED92CFB63AA00749B23 /* MinesweeperCell+State.swift */,
+				2BEABEDB2CFB66F000749B23 /* MinesweeperCell+View.swift */,
 			);
 			path = MinesweeperCell;
 			sourceTree = "<group>";
@@ -296,6 +314,7 @@
 				2B330C862BCEECF500A09EA8 /* MinesweeperUITests.swift */,
 				2B330C882BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift */,
 				2B235B122BD73C7D00182342 /* MinesweeperCellTests.swift */,
+				2BE6D37F2BE65F440026B874 /* MinesweeperBoardTests.swift */,
 			);
 			path = MinesweeperUITests;
 			sourceTree = "<group>";
@@ -398,7 +417,6 @@
 			name = Minesweeper;
 			packageProductDependencies = (
 				2BD020902BD0E7BD00EE4305 /* SwifterSwift */,
-				2B235B0E2BD5FF5B00182342 /* LookinServer */,
 				2B235B152BD7402200182342 /* PreviewSnapshots */,
 			);
 			productName = Minesweeper;
@@ -488,7 +506,6 @@
 			mainGroup = 2B330C5F2BCEECF300A09EA8;
 			packageReferences = (
 				2BD0208F2BD0E7BD00EE4305 /* XCRemoteSwiftPackageReference "SwifterSwift" */,
-				2B235B0D2BD5FF5B00182342 /* XCRemoteSwiftPackageReference "LookinServer" */,
 				2B235B142BD7402200182342 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */,
 			);
 			productRefGroup = 2B330C692BCEECF300A09EA8 /* Products */;
@@ -558,11 +575,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B235B072BD5F73D00182342 /* MinesweeperCell.swift in Sources */,
+				2BEABEE02CFB691600749B23 /* MinesweeperBoard+State.swift in Sources */,
 				2B235AFD2BD5F72600182342 /* MinesweeperUI.docc in Sources */,
-				2B235B0A2BD5F74A00182342 /* MinesweeperCell+Number.swift in Sources */,
+				2BEABEDA2CFB63AA00749B23 /* MinesweeperCell+State.swift in Sources */,
+				2BEABEDC2CFB66F000749B23 /* MinesweeperCell+View.swift in Sources */,
+				2BA1AA1C2CFC02880016DAF3 /* MinesweeperCell+ViewModel.swift in Sources */,
 				2B235B082BD5F74200182342 /* MinesweeperCell+Configuration.swift in Sources */,
-				2B235B092BD5F74600182342 /* MinesweeperCell+Square.swift in Sources */,
-				2B25BE3D2BE5E37C00055C5B /* MinesweeperBoard.swift in Sources */,
+				2BA1AA1A2CFBA45D0016DAF3 /* MinesweeperBoard+ViewModel.swift in Sources */,
+				2BEABEDE2CFB689200749B23 /* MinesweeperBoard.swift in Sources */,
+				2B25BE3D2BE5E37C00055C5B /* MinesweeperBoard+View.swift in Sources */,
+				2B5878F12BE64DB5003EDDA8 /* MinesweeperBoard+Collection.swift in Sources */,
+				2B25BE3F2BE5F13400055C5B /* MinesweeperBoard+Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +629,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B235B132BD73C7D00182342 /* MinesweeperCellTests.swift in Sources */,
+				2BE6D3802BE65F440026B874 /* MinesweeperBoardTests.swift in Sources */,
 				2B330C872BCEECF500A09EA8 /* MinesweeperUITests.swift in Sources */,
 				2B330C892BCEECF500A09EA8 /* MinesweeperUITestsLaunchTests.swift in Sources */,
 			);
@@ -699,8 +723,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -729,6 +754,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -736,6 +762,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.Minesweeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -751,10 +781,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -770,9 +803,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -794,7 +831,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -805,7 +842,10 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -822,10 +862,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -847,7 +890,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -858,7 +901,10 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -881,7 +927,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -892,7 +938,10 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -915,7 +964,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -926,7 +975,10 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperUI;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -949,7 +1001,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -960,7 +1012,10 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -983,7 +1038,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -994,7 +1049,10 @@
 				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu17 gnu++20";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				REGISTER_APP_GROUPS = NO;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1011,10 +1069,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1030,10 +1091,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperSDKTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1093,8 +1157,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1151,8 +1216,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_SWIFT_FLAGS = "-DTEST";
@@ -1180,6 +1246,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1187,6 +1254,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.Minesweeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1211,6 +1282,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1218,6 +1290,10 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.Minesweeper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1233,10 +1309,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1253,10 +1332,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1272,9 +1354,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1290,9 +1376,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 88Q289P63J;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.xclz.xtu.MinesweeperUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1376,14 +1466,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		2B235B0D2BD5FF5B00182342 /* XCRemoteSwiftPackageReference "LookinServer" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/QMUI/LookinServer/";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.8;
-			};
-		};
 		2B235B142BD7402200182342 /* XCRemoteSwiftPackageReference "swiftui-preview-snapshots" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/doordash-oss/swiftui-preview-snapshots";
@@ -1407,11 +1489,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2BD0208F2BD0E7BD00EE4305 /* XCRemoteSwiftPackageReference "SwifterSwift" */;
 			productName = SwifterSwift;
-		};
-		2B235B0E2BD5FF5B00182342 /* LookinServer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2B235B0D2BD5FF5B00182342 /* XCRemoteSwiftPackageReference "LookinServer" */;
-			productName = LookinServer;
 		};
 		2B235B152BD7402200182342 /* PreviewSnapshots */ = {
 			isa = XCSwiftPackageProductDependency;

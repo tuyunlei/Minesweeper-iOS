@@ -1,0 +1,3 @@
+/// Namespace
+public enum MinesweeperBoard {
+}
